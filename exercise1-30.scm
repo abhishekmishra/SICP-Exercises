@@ -2,12 +2,13 @@
 
 ;section on procedures as arguments
 
-;the sum procedure
+;iterative procedure for sum
 (define (sum term a next b)
-  (if (> a b)
-      0
-      (+ (term a)
-         (sum term (next a) next b))))
+  (define (iter a result)
+    (if (> a b)
+        result
+        (iter (next a) (+ result (term a)))))
+  (iter a 0))
 
 ;increment procedure
 (define (inc n) (+ n 1))
