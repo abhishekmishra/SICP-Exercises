@@ -1,16 +1,20 @@
 #lang scheme
 ;section on primes
 
-;smallest divisor
+;smallest divisor (improved to exclude even numbers)
 (define (smallest-divisor n)
   (find-divisor n 2))
 
 (define (square x) (* x x))
 
+(define (next n)
+  (cond ((= n 2) 3)
+        (else (+ n 2))))
+
 (define (find-divisor n test-divisor)
   (cond ((> (square test-divisor) n) n)
         ((divides? test-divisor n) test-divisor)
-        (else (find-divisor n (+ test-divisor 1)))))
+        (else (find-divisor n (next test-divisor)))))
 
 (define (divides? a b)
   (= (remainder b a) 0))
@@ -47,4 +51,5 @@
 (search-for-primes 100000000000 100000000060)
 (search-for-primes 1000000000000 1000000000065)
 
-;results of the last 3 are 4.6s, 1.4s, 0.45s which are close to an sqrt(10) multiples...
+;results of the last 3 are 2.5s, 1.4s, 0.45s which are close to an sqrt(10) multiples...
+;REVISIT for result
