@@ -11,5 +11,13 @@ Each exercise file is named:
 		<chapter#> is the Chapter Number in the book.
 		<exercise#> is the Exercise Number
 
+In case of extended exercises
+	exercise<chapter#>-<exercise_start#>_<exercise_end#>.scm
+
+	where,
+		<chapter#> is the Chapter Number in the book.
+		<exercise_start#> is the beginning Exercise Number
+		<exercise_end#> is the last Exercise Number in the range
+
 All files have been coded in the PLT Scheme IDE. They might use non-R5RS features.
 
