@@ -1,0 +1,15 @@
+This is a collection of solutions to problems to the book 
+"Structure and Interpretation of Computer Programs" by Abelson, Sussman, and Sussman.
+
+The solutions have been written during the course of self-study of this book.
+
+Files contain solution for one exercise each.
+Each exercise file is named: 
+	exercise<chapter#>-<exercise#>.scm
+
+	where,
+		<chapter#> is the Chapter Number in the book.
+		<exercise#> is the Exercise Number
+
+All files have been coded in the PLT Scheme IDE. They might use non-R5RS features.
+
